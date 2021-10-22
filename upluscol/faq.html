@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>U2 Collaboration</title>
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style_account.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 1050px)">
+</head>
+<body>
+  <div id="wrapper" class="faq_wrap" id="LC_Page_40000">
+    <header class="faq-header">
+        <a href="#"><div class="faq-logo"><img src="img/img-logo.png" alt=""></div></a>
+    </header>    
+    <section class=faq-wrap>
+        <h1 class="faq-title tac">FAQ</h1>
+        <div class="search-input-wrap">
+            <input type="text" placeholder="검색어를 입력하세요" id="search-input">
+            <button type="submit" id="search-btn"><img src="img/ic-search.png" alt=""></button>
+        </div>
+        <ul class="faq-tab-menu">
+            <li class="current">전체</li>
+            <li>회원가입</li>
+            <li>로그인</li>
+            <li>결제</li>
+        </ul>
+        <table class="tb-layout" id="tb-faq" summary="FAQ내용">
+            <colgroup>
+                <col width="15%">
+                <col width="80%">
+                <col width="5%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th class="tac" scope="col">분류</th>
+                    <th colspan="2" >내용</th>
+                </tr>
+              </thead>
+            <tbody>
+            </tbody>
+
+        </table>        
+    </section>
+    <footer class="faq-footer">
+        <div class="faq-bottom-logo"><img src="img/img-logo-bottom.png" alt=""></div>
+        <p class="copyright">ⓒ Copyright@U2 co., Ltd. All rights reserved</p>
+    </footer>
+  </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            var faqTableData = [['회원가입','회원가입FAQ 1번 질문이 나옵니다.','Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet'],
+                                ['로그인','로그인FAQ 1번 질문이 나옵니다.','Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet'],
+                                ['결제','결제FAQ 질문이 나옵니다.','Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet'],
+                                ['로그인','로그인FAQ 2번 질문이 나옵니다.','Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet'],
+                                ['로그인','로그인FAQ 1번 질문이 나옵니다.','Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet'],
+                                ['결제','결제FAQ 질문이 나옵니다.','Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet'],
+                                ['로그인','로그인FAQ 2번 질문이 나옵니다.','Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet'],                                
+                                ['회원가입','로그인FAQ 2번 질문이 나옵니다.','Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet']],
+                tbFAQ =document.getElementById('#tb-faq');
+
+            setTableBody(faqTableData,tbFAQ);
+            // resetTable();
+
+
+            $('.display-view').click(function(){
+                var currentRow = $(this).closest('tr');
+                var detail = currentRow.next('tr');
+                var detailImg = $(this).find("img");
+                if(detail.is(":visible")){
+                    detail.hide();
+                    if(detailImg.hasClass('close-detail')){
+                        detailImg.removeClass('close-detail');
+                    }
+                    detailImg.addClass('open-detail');
+                } else {
+                    detail.show();
+                    if(detailImg.hasClass('open-detail')){
+                        detailImg.removeClass('open-detail');
+                    }
+                    detailImg.addClass('close-detail');
+                }
+            });  
+            
+            $('.faq-tab-menu li').click(function(){
+                $(this).siblings().removeClass('current');
+                $(this).addClass('current');
+
+                //분류별 탭메뉴 클릭시 분류별로 sorting 기능 적용
+                var k = $(this).text();
+                if (k=="전체"){
+                    $("#tb-faq > tbody > tr").show();
+                    resetTable();
+                } else {                    
+                    $("#tb-faq > tbody > tr").hide();
+                    var temp = $("#tb-faq > tbody > tr > td:first-child:contains('" + k + "')");                    
+                    $(temp).parent().show();
+                }
+                
+            });
+
+            // 배열데이타 table tag로
+            function setTableBody(tableData,tableID){
+                tableData.forEach(function(data,idx){
+                    var addTag = '';   
+                    // var showDetail = true;
+                    // if (idx==0) {showDetail = true}
+                    // else showDetail = false;                    
+
+                    data.forEach(function(el,i){
+                        if (i==0) {                            
+                            addTag = '<tr><td class="tac">' + el + '</td>';
+                        }
+                        else if (i==1) {
+                            addTag += '<td class="width-span" scope="col">' + el + '</td>';
+                            // if (showDetail){
+                            //     addTag += '<td class="display-view" scope="col"><img class="close-detail"></td></tr>';
+                            // } else {
+                                addTag += '<td class="display-view" scope="col"><img class="open-detail"></td></tr>';
+                            // }
+                        }
+                        else if (i==2) {                            
+                            addTag += '<td colspan="3" class="view">' + el + '</td></tr>';                                                            
+                        }
+                    });                    
+                    // tableID.find('tbody').append(addTag);  
+                    var tbody = document.querySelector('tbody');
+                    tbody.innerHTML += addTag;                  
+                });
+            }   
+
+            // Detail row 접기
+            resetTable();
+            function resetTable(){
+                var viewData = document.querySelectorAll('.display-view');
+
+                viewData.forEach(function(el,i){
+                    // if (i>0) {
+                        el.click();
+                    // }
+                });
+            }            
+
+        });
+    </script>
+</body>
+</html>

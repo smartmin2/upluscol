@@ -1,0 +1,34 @@
+<div class="user-con"><a href="#" class="tool-btn" id="user-type">홍길동1111 님 <i class="ic-arrow"></i></a> 
+  <ul class="menu-box" id="user-type-box">
+    <li><button type="button" id="file-name-btn">이름</button></li>
+    <li><button type="button" id="file-date-btn">수정한 날짜</button></li>
+    <li><button type="button" id="file-size-btn">크기</button></li>
+  </ul>
+</div>
+<!--search-->
+<form id="search">
+  <div class="search-input-wrap">
+    <input type="text" placeholder="검색어를 입력하세요." class="search-input" />
+    <button type="submit" class="search-btn">검색 버튼</button>
+  </div>
+</form>
+<!-- 드라이브 리스트 -->
+
+<div class="drive-list-wrap">
+  <ul id="drive-list">
+      <!-- 내 드라이브 -->
+      <li id="my-drive" data-child="1">
+          <i class="ic-arrow"></i>
+          <button type="button" class="root_folder">홍길동's Team</button>
+          <button type="button" class="circle_btn" alt="추가하기">추가</button>
+          <ul class="child-node child1">
+              <li class="parent-node" id="parent1-1" data-child="2">
+                  <button type="button">Project1</button>
+              </li>
+              <li>
+                  <button type="button">Project2</button>
+              </li>
+          </ul>
+      </li>
+  </ul>
+</div>
